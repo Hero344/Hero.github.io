@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes - Quotes Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Quotes Collection</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="quotes.html" class="active">Quotes</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Famous Quotes</h2>
+        <p>Find your daily inspiration here!</p>
+    </div>
+
+    <!-- Random Quote Container -->
+    <div id="daily-quote" class="quote-box"></div>
+
+    <!-- Optional: Static quotes below (remove if using only random quote) -->
+    <div class="quote-box">
+        <p>"The only limit to our realization of tomorrow is our doubts of today."</p>
+    </div>
+
+    <div class="quote-box">
+        <p>"Life is what happens when you're busy making other plans."</p>
+    </div>
+
+    <div class="quote-box">
+        <p>"Do what you can, with what you have, where you are."</p>
+    </div>
+
+    <!-- JavaScript for Random Quote -->
+    <script>
+        const quotes = [
+            "The only limit to our realization of tomorrow is our doubts of today.",
+            "Life is what happens when you're busy making other plans.",
+            "Do what you can, with what you have, where you are.",
+            "Success isn't final, failure isn't fatal: it is the courage to continue that counts.",
+            "The journey of a thousand miles begins with a single step."
+        ];
+
+        // Random quote selection
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById("daily-quote").innerHTML = `<p>"${quotes[randomIndex]}"</p>`;
+    </script>
+</body>
+</html>
